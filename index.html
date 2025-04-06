@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Biblioteca de ícones Font Awesome -->
+    <title>Clone - Youtube - Vídeo em reprodução</title> <!-- Título da página -->
+</head>
+
+<body>
+    <!-- Cabeçalho do site -->
+    <header class="header">
+        <!-- Ícone do menu lateral -->
+        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+
+        <!-- Logo do YouTube -->
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="Logo do YouTube">
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-container">
+            <input class="search-input" type="text" placeholder="Pesquisar" aria-label="Pesquisar vídeos">
+            <!-- Campo de texto para pesquisa -->
+            <button class="search-button" aria-label="Pesquisar"> <!-- Botão de pesquisa -->
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="voice-search" aria-label="Pesquisar por voz"> <!-- Botão de pesquisa por voz -->
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <!-- Seção do lado direito do cabeçalho -->
+        <div class="right-section">
+            <button class="icon-button" aria-label="Criar vídeo"> <!-- Botão para criar vídeo -->
+                <i class="fas fa-video"></i>
+            </button>
+            <button class="icon-button" aria-label="Notificações"> <!-- Botão de notificações -->
+                <i class="fas fa-bell"></i>
+            </button>
+            <div class="user-avatar" aria-label="Perfil do usuário"> <!-- Avatar do usuário -->
+                <img src="assets/img/user.jpg" alt="Avatar do usuário">
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <!-- Container do player de vídeo -->
+        <div class="player-container">
+            <div class="video-player">
+                <img src="assets/img/video-principal-em-curso.png" alt="Mario Kart World"
+                    style="width: 100%; position: absolute; top: 0; left: 0;"> <!-- Imagem do vídeo principal -->
+                <div class="player-overlay">
+                    <!-- Barra de progresso do vídeo -->
+                    <div class="progress-bar">
+                        <div class="progress-filled"></div>
+                    </div>
+
+                    <!-- Controles do player -->
+                    <div class="player-controls">
+                        <div class="control-button"><i class="fas fa-play"></i></div> <!-- Botão de play -->
+                        <div class="control-button"><i class="fas fa-forward"></i></div> <!-- Botão de avançar -->
+                        <div class="control-button"><i class="fas fa-volume-mute"></i></div> <!-- Botão de volume -->
+                        <div class="time-display">0:24 / 4:27</div> <!-- Tempo do vídeo -->
+                        <div class="spacer"></div>
+                        <div class="control-button"><i class="fas fa-cog"></i></div> <!-- Botão de configurações -->
+                        <div class="control-button"><i class="fas fa-expand"></i></div> <!-- Botão de tela cheia -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações do vídeo -->
+            <div class="video-info">
+                <h1 class="video-title">Mario Kart World – Nintendo Direct | Nintendo Switch 2</h1>
+                <!-- Título do vídeo -->
+
+                <!-- Informações do canal -->
+                <div class="channel-container">
+                    <div class="channel-info">
+                        <div class="channel-avatar">N</div> <!-- Avatar do canal -->
+                        <div class="channel-text">
+                            <div class="channel-name">Nintendo of America <span class="verified-badge">✓</span></div>
+                            <!-- Nome do canal -->
+                            <div class="subscriber-count">9,35 mi de inscritos</div> <!-- Número de inscritos -->
+                        </div>
+                    </div>
+
+                    <!-- Ações do vídeo -->
+                    <div class="video-actions">
+                        <button class="action-button" aria-label="Curtir vídeo">
+                            <i class="fas fa-thumbs-up"></i> <span>122 mil</span> <!-- Botão de curtir -->
+                        </button>
+                        <button class="action-button" aria-label="Não gostei do vídeo">
+                            <i class="fas fa-thumbs-down"></i> <!-- Botão de não gostei -->
+                        </button>
+                        <button class="action-button"><i class="fas fa-share"></i> <span>Compartilhar</span></button>
+                        <!-- Botão de compartilhar -->
+                        <button class="action-button"><i class="fas fa-download"></i> <span>Download</span></button>
+                        <!-- Botão de download -->
+                        <button class="action-button"><i class="fas fa-cut"></i> <span>Clipe</span></button>
+                        <!-- Botão de clipe -->
+                        <button class="action-button"><i class="fas fa-ellipsis-h"></i></button>
+                        <!-- Botão de mais opções -->
+                    </div>
+                </div>
+                <div style="background-color: #272727; padding: 12px; border-radius: 12px;">
+                    <div style="display: flex; align-items: center;">
+                        <span style="font-weight: 500; margin-right: 8px;">3,5 mi de visualizações</span>
+                        <span style="color: #aaa;">há 3 dias</span>
+                    </div>
+                    <div>
+                        3.555.484 visualizações 2 de abr. de 2025 <span class="hashtags">#NintendoDirect
+                            #NintendoSwitch2 #MarioKartWorld</span>
+                        <div>Mario Kart World is launching exclusively for Nintendo Switch 2 on June 5, 2025! Learn
+                            more: <span class="hashtags">https://www.nintendo.com/us/gaming-sy...</span></div>
+                        <div>
+                            <div>
+                                <p>In Mario Kart World, you can go off the racetrack and drive virtually everywhere!</p>
+                                <p>Race seamlessly across connected roads and racetracks that deliver Mario Kart racing
+                                    like never before. Participate in the new Knockout Tour mode, where you’ll barrel
+                                    through back-to-back courses with no pit stops along the way. And in Free Roam mode,
+                                    it’s possible to go off the racetrack and drive in any direction you wish, explore
+                                    areas that pique your interest and take some photos at scenic spots with a group of
+                                    friends.</p>
+                                <p>Details about the game will be shared in an upcoming Mario Kart World Direct on April
+                                    17, 2025 at 6am PT.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra lateral com vídeos recomendados -->
+        <div class="sidebar">
+            <div class="tab-bar">
+                <div class="tab active">Todos</div> <!-- Aba ativa -->
+                <div class="tab">De Nintendo of America</div> <!-- Aba de vídeos do canal -->
+                <div class="tab">Relacionados</div> <!-- Aba de vídeos relacionados -->
+            </div>
+
+            <!-- Lista de vídeos recomendados -->
+            <div class="recommended-videos">
+                <!-- Exemplo de vídeo recomendado -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/vide-01.png" alt="Mario Kart" style="width:100%; height:100%;">
+                        <!-- Thumbnail do vídeo -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-badge">NOVO</div> <!-- Badge de novo -->
+                        <div class="video-card-title">Mario Kart World – Grand Prix Gameplay – Nintendo Switch 2</div>
+                        <!-- Título do vídeo -->
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div> <!-- Nome do canal -->
+                        <div class="video-stats">304 mil visualizações • há 20 horas</div>
+                        <!-- Estatísticas do vídeo -->
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                    <!-- Botão de mais opções -->
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-02.png" alt="Nintendo Switch 2" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">5:31</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-badge">NOVO</div>
+                        <div class="video-card-title">Nintendo Switch 2 – Overview Trailer</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">3,7 mi de visualizações • há 3 dias</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-03.png" alt="Thumbnail do vídeo Zelda Orchestra"
+                            style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">29:15</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-card-title">The Legend of Zelda Orchestra Concert Nintendo Live 2024...</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">4,9 mi de visualizações • há 1 ano</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-04.png" alt="Donkey Kong" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">2:26</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-badge">NOVO</div>
+                        <div class="video-card-title">Donkey Kong Bananza – Nintendo Direct | Nintendo Switch 2</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">1,9 mi de visualizações • há 3 dias</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-05.png" alt="Nintendo Sound Clock" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">4:48</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-card-title">Nintendo Sound Clock: Alarmo – Announcement Trailer</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</div>
+                        <div class="video-stats">2,2 mi de visualizações • há 5 meses</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-06.png" alt="Kirby Air Riders" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">1:30</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-badge">NOVO</div>
+                        <div class="video-card-title">Kirby Air Riders – Nintendo Direct | Nintendo Switch 2</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">773 mil visualizações • há 3 dias</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 7 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-07.png" alt="Super Mario Odyssey" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">2:43</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-card-title">Super Mario Odyssey - Nintendo Switch Presentation 2017...</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">58 mi de visualizações • há 8 anos</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+
+                <!-- Video 8 -->
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="assets/img/video-08.png" alt="Pokémon Legends" style="width:100%; height:100%;">
+                        <!-- <div class="video-duration">1:30</div> -->
+                    </div>
+                    <div class="video-details">
+                        <div class="video-card-title">Pokémon Legends: Z-A – Nintendo Direct 3.27.2025</div>
+                        <div class="channel-name-small">Nintendo of America <span>✓</span></div>
+                        <div class="video-stats">1,5 mi de visualizações • há 9 dias</div>
+                    </div>
+                    <div class="options-button" tabindex="0" aria-label="Mais opções">⋮</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

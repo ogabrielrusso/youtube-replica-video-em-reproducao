@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão */
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    /* Alinha os itens em linha */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Espaça os itens */
+    padding: 0 16px;
+    /* Espaçamento interno */
+    height: 56px;
+    /* Altura do cabeçalho */
+    background-color: #0f0f0f;
+    /* Cor de fundo */
+    position: sticky;
+    /* Fixa no topo ao rolar */
+    top: 0;
+    z-index: 10;
+    /* Garante que fique acima de outros elementos */
+}
+
+/* Ícones do cabeçalho */
+.menu-icon,
+.icon-button {
+    color: white;
+    /* Cor dos ícones */
+    cursor: pointer;
+    /* Mostra o cursor de clique */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-right: 40px;
+}
+
+.logo img {
+    height: 20px;
+    /* Altura da logo */
+}
+
+.search-container {
+    display: flex;
+    /* Alinha os itens em linha */
+    align-items: center;
+    /* Centraliza verticalmente */
+    flex-grow: 1;
+    /* Faz a barra ocupar o espaço disponível */
+    max-width: 600px;
+    /* Largura máxima */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 40px 0 0 40px;
+    border: 1px solid #303030;
+    padding: 0 12px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    background-color: #121212;
+    color: white;
+}
+
+.search-button {
+    background-color: #303030;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.voice-search {
+    background-color: #303030;
+    border: none;
+    padding: 8px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user-avatar img {
+    width: 32px;
+    /* Largura do avatar */
+    height: 32px;
+    /* Altura do avatar */
+    border-radius: 50%;
+    /* Deixa o avatar redondo */
+    object-fit: cover;
+    /* Ajusta a imagem ao container */
+}
+
+/* Layout principal */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    margin-top: 0;
+}
+
+/* Player principal */
+.player-container {
+    flex: 2;
+    min-width: 300px;
+    padding: 0 24px;
+    max-width: 1200px;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+    background-color: black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.player-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.progress-filled {
+    height: 100%;
+    width: 5%;
+    background-color: #f00;
+}
+
+.control-button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    margin-right: 4px;
+}
+
+.time-display {
+    color: white;
+    font-size: 12px;
+    margin: 0 8px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.video-info {
+    margin-top: 12px;
+}
+
+.video-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.channel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+}
+
+.channel-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-name {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.verified-badge {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.subscriber-count {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.video-actions {
+    display: flex;
+    align-items: center;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 0 16px;
+    height: 36px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.action-button span {
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 0 12px;
+}
+
+.tab-bar {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 12px;
+    padding: 12px 0;
+}
+
+.tab-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-right: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tab.active {
+    background-color: white;
+    color: black;
+}
+
+.recommended-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.video-card {
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.thumbnail {
+    width: 168px;
+    height: 94px;
+    border-radius: 8px;
+    background-color: #181818;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.video-details {
+    padding: 0 8px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.video-card-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.channel-name-small {
+    color: #aaa;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.video-stats {
+    color: #aaaaaa;
+    font-size: 0.875rem;
+}
+
+.dot-separator {
+    margin: 0 4px;
+}
+
+.video-badge {
+    background-color: #CC0000;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.options-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hashtags {
+    color: #3ea6ff;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* Estilo para os ícones */
+.control-button i,
+.action-button i,
+.icon-button i {
+    font-size: 16px;
+    color: white;
+}
+
+.menu-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+.user-avatar i {
+    font-size: 32px;
+    color: white;
+}
+
+.icon-button i,
+.action-button i,
+.search-button i,
+.voice-search i {
+    font-size: 18px;
+    color: white;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.voice-search i {
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .player-container,
+    .sidebar {
+        width: 100%;
+    }
+}
