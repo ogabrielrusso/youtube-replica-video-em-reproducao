@@ -65,3 +65,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE.md
 ### 🙏 Agradecimentos
 
 Font Awesome pelos ícones utilizados e a formação Css da DIO.
+
+__Observação:__
+
+Esse projeto é fictício para fins de estudo e não tem qualquer associação com a Nintendo®, YouTube® ou empresas relacionadas.
