@@ -5,37 +5,22 @@
     font-family: 'Roboto', Arial, sans-serif;
 }
 
-/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    /* Define a fonte padrão */
-    margin: 0;
-    padding: 0;
     background-color: #0f0f0f;
-    /* Cor de fundo */
     color: white;
-    /* Cor do texto */
 }
 
-/* Cabeçalho */
+/* Layout Flexbox para o Header */
 .header {
     display: flex;
-    /* Alinha os itens em linha */
     align-items: center;
-    /* Centraliza verticalmente */
-    justify-content: space-between;
-    /* Espaça os itens */
     padding: 0 16px;
-    /* Espaçamento interno */
     height: 56px;
-    /* Altura do cabeçalho */
     background-color: #0f0f0f;
-    /* Cor de fundo */
     position: sticky;
-    /* Fixa no topo ao rolar */
     top: 0;
     z-index: 10;
-    /* Garante que fique acima de outros elementos */
+    flex-wrap: wrap;
 }
 
 /* Ícones do cabeçalho */
@@ -65,7 +50,7 @@ body {
     /* Alinha os itens em linha */
     align-items: center;
     /* Centraliza verticalmente */
-    flex-grow: 1;
+    flex: 1;
     /* Faz a barra ocupar o espaço disponível */
     max-width: 600px;
     /* Largura máxima */
@@ -145,18 +130,15 @@ body {
 /* Layout principal */
 .main-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
     padding: 16px;
-    margin-top: 0;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 /* Player principal */
 .player-container {
-    flex: 2;
+    flex: 1;
     min-width: 300px;
-    padding: 0 24px;
-    max-width: 1200px;
 }
 
 .video-player {
@@ -225,7 +207,9 @@ body {
 }
 
 .video-info {
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .video-title {
@@ -238,6 +222,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 16px;
 }
 
@@ -280,6 +265,7 @@ body {
 
 .video-actions {
     display: flex;
+    gap: 8px;
     align-items: center;
 }
 
@@ -301,17 +287,14 @@ body {
 
 /* Barra lateral */
 .sidebar {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    flex: 0 0 400px;
     padding: 0 12px;
 }
 
 .tab-bar {
     display: flex;
     overflow-x: auto;
-    scrollbar-width: none;
-    margin-bottom: 12px;
+    gap: 8px;
     padding: 12px 0;
 }
 
@@ -343,7 +326,8 @@ body {
 
 .video-card {
     display: flex;
-    margin-bottom: 8px;
+    gap: 12px;
+    margin-bottom: 12px;
     position: relative;
 }
 
@@ -475,14 +459,98 @@ p {
     line-height: 1.6;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .sidebar {
+        flex: 0 0 350px;
+    }
+}
+
+@media (max-width: 960px) {
     .main-content {
         flex-direction: column;
     }
 
-    .player-container,
     .sidebar {
+        flex: 1;
         width: 100%;
+    }
+
+    .player-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 8px;
+    }
+
+    .search-container {
+        order: 1;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+    }
+
+    .right-section {
+        margin-left: auto;
+    }
+
+    .video-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .action-button span {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 8px;
+    }
+
+    .video-card {
+        flex-direction: column;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-details {
+        padding: 8px 0;
+    }
+
+    .channel-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .video-actions {
+        justify-content: center;
+    }
+
+    .search-container {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .voice-search {
+        display: none;
+    }
+
+    .right-section {
+        gap: 8px;
     }
 }
